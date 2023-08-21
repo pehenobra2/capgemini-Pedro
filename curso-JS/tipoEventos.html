@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Eventos</title>
+
+        <!--JS-->
+        <script>
+            
+            function mensagem(){
+                alert("Eae mundo!!!");
+            }
+            
+            function escolhaCurso(){
+                var curso = document.getElementById("cursos").value;
+
+                alert(curso);
+            }
+
+
+            function bemVindo(){
+                alert("Seja bem vindo ao meu site!!!!")
+            }
+
+            /*
+                onKeyUp: Exibe o caracter e depois executa a ação.
+
+                onKeyDown: Executa a ação e depois exibe o caracter.
+
+                onKeyPress: Executa a ação e depois exibe o caracter, mas não tem suporte as seguintes teclas:
+                F1...F12, ALT, CTRL, SHIFT ...
+            */
+
+            function exibir(){
+                var campo = document.getElementeById("campo").value;
+                alert(campo);
+            }
+        </script>
+
+    </head>
+
+    <body onLoad="bemVindo()">
+
+        <button onclick="mensagem()"> Clique aqui</button>
+
+        <select onChange="escolhaCurso()" id="cursos">
+            <option>Escolha seu curso</option>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>Js</option>
+        </select>
+
+        <input type="text" id="campo" onkeyup="exibir()">
+        <input type="text" id="campo" onkeydown="exibir()">
+        <input type="text" id="campo" onkeypress="exibir()">
+
+    </body>
+
+</html>

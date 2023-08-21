@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Seletore jquery</title>
+
+        <!--JS-->
+
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+        <script >
+
+            import $ from "jquery";
+            
+            var $ = require( "jquery" );
+
+            define( [ "jquery" ], function( $ ) {
+
+            } );
+
+            $(document).ready(function(){
+
+                var campo = $("input").val();
+                var titulo = $("#titulo").html();
+                var subtitulo = $(".subtitulo").html();
+
+                alert(campo);
+                alert(titulo);
+                alert(subtitulo);
+            
+                $("button").click(function(){
+                    $("h1").html("você clicou no botão");
+                })
+
+
+            })
+
+
+        </script>
+
+    </head>
+
+    <body >
+
+        <input type="text" value="Campo nome"/>
+        <h1 id="titulo"> Título em H1</h1>
+        <H2 class="subtitulo"> Título em H2</H2>
+
+
+        <h3>Oi oi</h3>
+        <button>Clique aqui</button>
+
+    </body>
+
+</html>
